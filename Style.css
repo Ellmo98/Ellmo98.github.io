@@ -1,0 +1,116 @@
+/* ===== Generelt ===== */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* ===== Bakgrunner ===== */
+.bg-1 { background-color: #033300; color: rgb(120, 251, 192); }
+.bg-2 { background-color: #055b00; color: #82feb1; }
+.bg-3 { background-color: #046f00; color: #98f8b3; }
+
+/* ===== Profilbilde ===== */
+.rounded-circle {
+  transition: transform 0.3s ease;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Spin animasjon ===== */
+.spin {
+  animation: spin 1s linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== Kortbilder ===== */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===== Carousel ===== */
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+}
+
+/* ===== Popup ===== */
+.popup-overlay {
+  display: none; /* skjult */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ===== Høy kontrast ===== */
+body.high-contrast {
+  background-color: black !important;   /* gjør hele bakgrunnen svart */
+  color: yellow !important;             /* gjør all tekst gul */
+  font-size: 1.2rem;                     /* gjør teksten litt større */
+  line-height: 1.6;                      /* bedre lesbarhet */
+}
+
+/* Bakgrunner på seksjoner */
+body.high-contrast .bg-1,
+body.high-contrast .bg-2,
+body.high-contrast .bg-3 {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+/* Kort */
+body.high-contrast .card {
+  background-color: black !important;
+  color: yellow !important;
+  font-size: 1.1rem;
+}
+
+/* Lenker */
+body.high-contrast a {
+  color: yellow !important;
+  font-weight: bold;
+}
+
+/* Footer */
+body.high-contrast footer {
+  background-color: black !important;
+  color: yellow !important;
+  font-size: 1.2rem;
+}
+
+/* Profilbilde ramme */
+body.high-contrast #profilbilde {
+  border: 5px solid yellow;
+}
+
+/* Navbar */
+body.high-contrast .navbar {
+  background-color: black !important;
+}
+
+body.high-contrast .navbar .nav-link,
+body.high-contrast .navbar .navbar-brand {
+  color: yellow !important;
+  font-weight: bold;
+}
+
+/* Hamburger ikon */
+body.high-contrast .navbar-toggler-icon {
+  filter: invert(1);
+}
